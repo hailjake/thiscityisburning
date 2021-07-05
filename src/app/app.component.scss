@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+
+.global-container {
+    //background-color: $darkgray;
+    color: $white;
+    font-size: $font-size;
+    width: 100vw;
+    height: 100vh;
+
+    .sidenav {
+
+    }
+    .main-content {
+
+    }
+}
