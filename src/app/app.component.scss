@@ -9,9 +9,30 @@
     height: 100vh;
 
     .sidenav {
+        background-color: $darkgray;
+        ul {
+            list-style: none;
+            padding:0;
+            margin:0;
 
+            li {
+                button {
+                    width: 200px;
+                    text-align: left;
+                }
+            }
+        }
     }
     .main-content {
-
+        .mat-toolbar {
+            position: absolute;
+            z-index: 10;
+            background-color: transparent;
+            width: 100%;
+            top: 0;
+            .example-spacer {
+                flex: 1 1 auto;
+              }
+        }
     }
 }
