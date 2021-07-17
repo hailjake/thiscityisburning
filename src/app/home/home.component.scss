@@ -17,7 +17,7 @@ $opacity: 0.2;
             -45deg,
             transparentize(#c02d00, $opacity),
             transparentize(#f04a03, $opacity),
-            transparentize(#585858, $opacity),
+            transparentize(#1d1d1d, $opacity),
             transparentize(#1f1f1f, $opacity)
           );
           background-size: 400% 400%;
@@ -39,15 +39,47 @@ $opacity: 0.2;
         }
       }
 
-      h1 {
-          left:0;
-          width: 100%;
-          position: absolute;
-          text-align: center;
-          padding: 15% 0 0 0;
-          font-size: 5rem;
-          font-weight: 100;
-      }
+
+.homepage-temp {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  top: 30%;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 0  10px;
+  h1 {
+    text-align: right;
+    font-family: 'Yantramanav', sans-serif;
+
+    span {
+      display:block;
+    }
+
+    .header-1 {
+      font-size: 16px;
+      font-weight: 100;
+      font-style: italic;
+
+
+    }
+    .header-2 {
+      font-size: 54px;
+      letter-spacing: -1px;
+      font-weight: 400;
+
+    }
+    .header-3 {
+      font-size: 38px;
+            padding-bottom: 20px;
+      letter-spacing: -2px;
+      font-weight: 100;
+
+    }
+  }
+}
+
+
       
 }
 

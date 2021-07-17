@@ -1,0 +1,21 @@
+
+.header  {
+    background-color: #303030 !important;
+}
+
+.artist-container {
+    padding: 62px 15px;
+
+    .card {
+        width: calc(25% - 8px);
+        display: inline-block;
+        margin-right: 8px;
+        margin-bottom: 8px;
+
+        .mat-card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: top;
+        }
+    }
+}

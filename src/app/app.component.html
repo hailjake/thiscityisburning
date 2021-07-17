@@ -26,13 +26,17 @@
 
 
     <!--Apps Are Routed Here-->
-    <perfect-scrollbar style="max-width: 100%; max-height:100vh;">
+    <perfect-scrollbar style="max-width: 100%; max-height:100vh;" [scrollIndicators]="true">
 
           <!--Header-->
-    <mat-toolbar>
-      <button type="button" mat-button (click)="drawer.toggle()">
+    <mat-toolbar class="header">
+      <!-- <button type="button" mat-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
-      </button>
+      </button> -->
+      <button routerLink="/home-component" routerLinkActive="active" mat-button>home</button>
+      <button routerLink="/artists-component" routerLinkActive="active" mat-button>artists</button>
+      <button routerLink="/contact-component" routerLinkActive="active" mat-button>contact</button>
+
       <span class="example-spacer"></span>
 
       <a type="button" href="https://this-city-is-burning.myshopify.com/" mat-button>
