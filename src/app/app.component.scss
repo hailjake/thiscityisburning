@@ -33,6 +33,12 @@
             .example-spacer {
                 flex: 1 1 auto;
               }
+
+              button {
+                  &.active {
+                      background-color: rgba(163, 3, 3, 0.2);;
+                  }
+              }
         }
     }
 }

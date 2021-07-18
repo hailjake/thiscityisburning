@@ -1,5 +1,7 @@
 <div class="header-bg"></div>
 <section class="artist-container">
+  <div class="hero-overlay"></div>
+
     <mat-card *ngFor="let artist of artists" class="card">
         <div mat-card-image  [style.background-image]="'url(/assets/' + artist.img + ')'"></div>
         <mat-card-header>

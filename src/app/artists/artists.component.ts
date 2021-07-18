@@ -51,8 +51,8 @@ export class ArtistsComponent implements OnInit {
     }, 
     {
       name: "T. mills",
-      record: "Finders Keepers EP ",
-      release: "2009",
+      record: "Finders Keepers EP",
+      release: "2009 (uprising/tcib)",
       img: "tmills.jpg",
       cd: "tmillscd.jpg",
       bio: "At the age of 17, Mills began writing songs in his own bedroom, using music's software such as Apple's Garage Band. At the age of 18, Mills began posting some of his music on his Myspace page. In 2008, Mills signed a deal to the indie record label Uprising /This City Is Burning Records."
@@ -92,7 +92,7 @@ export class ArtistsComponent implements OnInit {
     {
       name: "Her Demise My Rise",
       record: "The Takeover",
-      release: "2009 (tcib/uprising)",
+      release: "2009 (uprising/tcib)",
       img: "herdemisemyrise.webp",
       cd: "hdmrcd.jpg",
       bio: "Inland Empire Deathcore / Metalcore band with ex member jake anderson from carnifex her demise released their debut record the takeover through this city is burning records."
@@ -100,7 +100,7 @@ export class ArtistsComponent implements OnInit {
     {
       name: "Broadway",
       record: "Kingdoms",
-      release: "2009 (tcib/uprising)",
+      release: "2009 (uprising/tcib)",
       img: "broadway.jpg",
       cd: "broadwaycd.jpg",
       bio: "Broadway released their first full-length studio album. It was entitled Kingdoms through Uprising Records. The album features two high-profiled artists of other post-hardcore bands. Lead vocalist Jonny Craig of Dance Gavin Dance is featured on the track Don't Jump The Shark Before You Save The Whale, The other featured artist, Craig Owens of Chiodos, appears on the track Same Thing We Do Everyday Pinky."
