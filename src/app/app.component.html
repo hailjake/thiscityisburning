@@ -23,12 +23,8 @@
   </mat-drawer>
 
   <div class="main-content">
-
-
-    <!--Apps Are Routed Here-->
     <perfect-scrollbar style="max-width: 100%; max-height:100vh;" [scrollIndicators]="true">
-
-          <!--Header-->
+    <!--Header-->
     <mat-toolbar class="header">
       <!-- <button type="button" mat-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
@@ -36,19 +32,19 @@
       <button routerLink="/home" routerLinkActive="active" mat-button>home</button>
       <button routerLink="/artists" routerLinkActive="active" mat-button>artists</button>
       <button routerLink="/contact" routerLinkActive="active" mat-button>contact</button>
-
       <span class="example-spacer"></span>
-
       <a type="button" href="https://this-city-is-burning.myshopify.com/" mat-button>
         <mat-icon>shopping_cart</mat-icon>
       </a>
-        
     </mat-toolbar>
+    <div class="loading" *ngIf="showOverlay">
+      <div class="loading-overlay"></div>
+      <img src="assets/loading.gif"/>
+    </div>
+      <!--Apps Are Routed Here-->
       <router-outlet>
 
       </router-outlet>
     </perfect-scrollbar>
-
   </div>
-
 </mat-drawer-container>

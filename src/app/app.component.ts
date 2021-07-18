@@ -1,5 +1,14 @@
-import { Component, HostListener, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+
+import {
+  Router,
+  Event as RouterEvent,
+  NavigationStart,
+  NavigationEnd,
+  NavigationCancel,
+  NavigationError
+} from '@angular/router'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,10 +16,30 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent {
 
-  @HostListener('window:scroll', ['$event']) 
-    doSomething(event) {
-      // console.debug("Scroll Event", document.body.scrollTop);
-      // see András Szepesházi's comment below
-      console.debug("Scroll Event", window.pageYOffset );
+  public showOverlay = true;
+
+  constructor(private router: Router) {
+
+    router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event)
+    })
+  }
+  
+  // Shows and hides the loading spinner during RouterEvent changes
+  navigationInterceptor(event: RouterEvent): void {
+    if (event instanceof NavigationStart) {
+      this.showOverlay = true;
     }
+    if (event instanceof NavigationEnd) {
+      this.showOverlay = false;
+    }
+
+    // Set loading state to false in both of the below events to hide the spinner in case a request fails
+    if (event instanceof NavigationCancel) {
+      this.showOverlay = false;
+    }
+    if (event instanceof NavigationError) {
+      this.showOverlay = false;
+    }
+  }
 }
