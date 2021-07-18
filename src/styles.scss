@@ -356,3 +356,42 @@
     font-family: 'Roboto', serif;
 
   }
+
+  $opacity: 0.5;
+
+  .loading {
+    width: 100vw;
+    height: 100vh;
+    background: #2c2c2c;
+    .loading-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:0;
+      left:0;
+      z-index: 10;
+      background: linear-gradient(-45deg,
+      transparentize(#c02d00, $opacity),
+      transparentize(#f04a03, $opacity),
+      transparentize(#a30303, $opacity),
+      transparentize(#2c2c2c, $opacity));
+    }
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+  
+      50% {
+        background-position: 100% 50%;
+      }
+  
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    img {
+      width: 100%;
+      position: relative;
+      top:30%;
+    }
+  }
