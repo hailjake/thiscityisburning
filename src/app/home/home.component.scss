@@ -1,87 +1,99 @@
-$opacity: 0.2;
+$opacity: 0.1;
 
 .hero-wrapper {
-    display: block;
-    position: relative;
-    background: url('https://media.giphy.com/media/jq0GElfMAi8CGwTkBX/giphy.gif');
-    height: calc(100vh);
-    background-position: center;
-    background-size: cover;
-    .hero-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top:0;
-        left:0;
-        background: linear-gradient(
-            -45deg,
-            transparen tize(#c02d00, $opacity),
-            transparentize(#f04a03, $opacity),
-            transparentize(#1d1d1d, $opacity),
-            transparentize(#1f1f1f, $opacity)
-          );
-          background-size: 400% 400%;
-          animation: gradient-animation 15s ease infinite;
-          height: 100%;
-          width: 100%;
+  display: block;
+  position: relative;
+  background: url('https://media.giphy.com/media/jq0GElfMAi8CGwTkBX/giphy.gif');
+  height: calc(100vh);
+  background-position: center;
+  background-size: cover;
+
+  .hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(-45deg,
+        transparentize(#c02d00, $opacity),
+        transparentize(#f04a03, $opacity),
+        transparentize(#a30303, $opacity),
+        transparentize(#1f1f1f, $opacity));
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    height: 100%;
+    width: 100%;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
     }
 
+    50% {
+      background-position: 100% 50%;
+    }
 
-    @keyframes gradient-animation {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
-
-.homepage-temp {
-  position: relative;
-  width: 500px;
-  margin: auto;
-  top: 30%;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  padding: 0  10px;
-  h1 {
+  .homepage-temp {
+    position: relative;
+    width: 440px;
+    margin: auto;
+    top: 30%;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 0 12px 5px 0;
     text-align: right;
     font-family: 'Yantramanav', sans-serif;
 
-    span {
-      display:block;
+    @media only screen and (max-width: 500px) {
+      width: 100%;
     }
 
-    .header-1 {
-      font-size: 16px;
-      font-weight: 100;
-      font-style: italic;
+    h1 {
+      margin: 0;
 
+      span {
+        display: block;
+      }
 
-    }
-    .header-2 {
-      font-size: 54px;
-      letter-spacing: -1px;
-      font-weight: 400;
+      .header-1 {
+        font-size: 16px;
+        font-weight: 100;
+        font-style: italic;
 
-    }
-    .header-3 {
-      font-size: 38px;
-            padding-bottom: 20px;
-      letter-spacing: -2px;
-      font-weight: 100;
+        @media only screen and (max-width: 500px) {
+          font-size: 12px;
+        }
 
+      }
+
+      .header-2 {
+        font-size: 54px;
+        letter-spacing: -1px;
+        font-weight: 400;
+
+        @media only screen and (max-width: 500px) {
+          font-size: 40px;
+        }
+
+      }
+
+      .header-3 {
+        font-size: 37px;
+        padding-bottom: 20px;
+        letter-spacing: -2px;
+        font-weight: 100;
+
+        @media only screen and (max-width: 500px) {
+          font-size: 29px;
+        }
+
+      }
     }
   }
 }
-
-
-      
-}
-
-
-

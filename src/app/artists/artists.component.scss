@@ -1,6 +1,11 @@
 
-.header  {
-    background-color: #303030 !important;
+.header-bg  {
+    background-color: #303030 ;
+    position: absolute;
+    z-index: 4;
+    width: 100vw;
+    top: 0;
+    height: 62px;
 }
 
 .artist-container {
@@ -11,11 +16,28 @@
         display: inline-block;
         margin-right: 8px;
         margin-bottom: 8px;
+        @media only screen and (max-width: 1400px) {
+            width: calc(50% - 8px);
 
+        }
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+        }
         .mat-card-image {
             height: 200px;
             background-size: cover;
             background-position: top;
+        }
+        .mat-card-avatar {
+            height: 75px;
+            width: 75px;
+            background-size: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        .mat-card-content {
+            height: 110px;
         }
     }
 }
