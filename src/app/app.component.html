@@ -33,9 +33,9 @@
       <button routerLink="/artists" routerLinkActive="active" mat-button>artists</button>
       <button routerLink="/contact" routerLinkActive="active" mat-button>contact</button>
       <span class="example-spacer"></span>
-      <a type="button" href="https://this-city-is-burning.myshopify.com/" mat-button>
+      <button type="button" onClick="window.open('https://this-city-is-burning.myshopify.com/')" mat-button>        
         <mat-icon>shopping_cart</mat-icon>
-      </a>
+      </button>
     </mat-toolbar>
     <div class="loading" *ngIf="showOverlay">
       <div class="loading-overlay"></div>
